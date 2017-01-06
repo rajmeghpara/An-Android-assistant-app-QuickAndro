@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'xyz123789xyz'
+            keyPassword 'xyz123789xyz'
+            storePassword 'xyz123789xyz'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.rarity.apps.quickandro"
+        minSdkVersion 17
+        targetSdkVersion 19
+        versionCode 1
+        versionName "8.1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.1.0'
+    compile 'com.android.support:design:24.1.0'
+    compile 'com.android.support:recyclerview-v7:24.1.0'
+    compile 'com.google.android.gms:play-services-ads:9.2.1'
+}

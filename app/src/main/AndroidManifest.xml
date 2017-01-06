@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rarity.apps.quickandro"
+    android:versionCode="1"
+    android:versionName="8.1.0">
+
+    <!-- permissions for Call module -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- permissions for Contact module -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- permissions for SpeechToText module -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- permissions for Message module -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- permissions to run shaking service when device is locked -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- permission to start background service on boot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- permission to use vibrator -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- permissions to access bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- permission to access wifi and hotspot -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- permission to access auto rotation -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- permission to access flashlight -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- permission to set alarm -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.rarity.apps.quickandro.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rarity.apps.quickandro.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"></activity>
+
+        <service android:name="com.rarity.apps.quickandro.RunBackground" />
+
+        <receiver
+            android:name="com.rarity.apps.quickandro.StartOnBoot"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name="com.rarity.apps.quickandro.AboutActivity"></activity>
+    </application>
+
+</manifest>

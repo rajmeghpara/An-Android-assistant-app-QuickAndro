@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:weightSum="1">
+
+        <include
+            layout="@layout/toolbar_layout">
+
+        </include>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabBackground="@color/colorAccen"
+                    app:tabMode="fixed"
+                    app:tabGravity="fill" />
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <ImageButton
+            android:layout_width="@dimen/runBtn_size"
+            android:layout_height="@dimen/runBtn_size"
+            android:id="@+id/button"
+            android:src="@drawable/run_btn"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:scaleType="fitCenter"/>
+
+        <com.google.android.gms.ads.AdView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/adBanner"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-7145982136829866/2574751832"
+
+            android:layout_gravity="center_horizontal">
+
+
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#dcfcefff"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:src="@drawable/drawer_logo"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:divider="#838383"
+            android:dividerHeight="@dimen/divider_height"
+            android:id="@+id/drawerlist"
+            android:layout_gravity="left"
+            android:cacheColorHint="@android:color/transparent"
+            android:touchscreenBlocksFocus="false"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

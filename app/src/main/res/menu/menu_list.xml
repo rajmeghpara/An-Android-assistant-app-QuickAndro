@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu">
+
+    <item
+        android:title="Share"
+        android:id="@+id/share" />
+
+    <item
+        android:title="About Us"
+        android:id="@+id/about"/>
+
+    <item
+        android:title="Rate Us"
+        android:id="@+id/rate"/>
+
+    <item
+        android:title="Exit"
+        android:id="@+id/exit"/>
+
+</menu>

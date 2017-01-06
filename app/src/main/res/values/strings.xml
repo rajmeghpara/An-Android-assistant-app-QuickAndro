@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">QuickAndro</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+    <string name="skip1">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="next">NEXT</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="share_link">http://play.google.com/store/apps/details?id=com.rarity.apps.quickandro</string>
+    <string name="email">apps.rarity@gmail.com</string>
+
+    <string name="open_drawer">open</string>
+    <string name="close_drawer">close</string>
+
+    <string-array name="drawer_items">
+        <item>Call</item>
+        <item>Calculate</item>
+        <item>Open</item>
+        <item>Message</item>
+        <item>Profile</item>
+        <item>Search</item>
+        <item>Turn(On/Off)</item>
+        <item>Alarm</item>
+    </string-array>
+
+    <string-array name="drawer_description">
+        <item>To call, Use the format: \'Call\' + \'Name/Number\'</item>
+        <item>Speak \'Calculate\' and then any simple mathematical operation you want to perform.</item>
+        <item>To easily open a specific application from a bunch, use the format \'Open\' + \'Name\'</item>
+        <item>Message anyone by saying out loud the  phrase \'Message\' + \'Name\'</item>
+        <item>Easier Profile Management using the command \'Profile\' + \'Profile Mode you want to set\'</item>
+        <item>Search any among the Google, Wikipedia, Youtube or Dictionary easily using the command \'Search\' + \'Google/Wiki/Wikipedia/Dictionary\' (by default Google) + \'anything you want to search\'</item>
+        <item>Easy turn on/off any of the Wi-Fi, Bluetooth, or any other accessibility options using the command \'Turn\' + \'On/Off\' + \'Option\'</item>
+        <item>Set Alarm Quickly using the Command \'Alarm\' + \'Time\' + \'AM/PM\'</item>
+    </string-array>
+
+    <string-array name="drawer_items2">
+        <item>Share</item>
+        <item>About us</item>
+        <item>Rate us</item>
+        <item>Exit</item>
+    </string-array>
+
+</resources>
